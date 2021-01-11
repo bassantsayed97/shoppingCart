@@ -1,0 +1,55 @@
+
+
+<br><br>
+
+
+<div class="container">
+  <div class="row">
+      <div class="col-12">
+          <div class="table-responsive"  style="margin-top: 55px;">
+            <table class="table-fill mt-5">
+                <thead>
+                <tr>
+                <th class="text-left">Product</th>
+                <th class="text-left">Price</th>
+                <th class="text-left">Quantity</th>
+               
+                <th class="text-left">action</th>
+                <th class="text-left">total</th>
+                </tr>
+                </thead>
+                <tbody class="table-hover">
+                
+                <tr *ngFor="let i of productarr">
+                <td class="text-left"><img  src="{{i.image}}"
+                    role="img"  class="rounded-circle text-center ml-5" style="width:70px;height:70px;"/></td>
+               
+                <td class="text-left">{{i.price}}$</td>
+            
+                <td class="text-left"><input class="form-control" [value]="" type="number" min=0 max="1000" /></td>
+               
+                <td class="text-center"><button (click)="remove(i)" class="btn btn-sm btn-danger">Delete </button></td>
+                          
+                <td class="text-left">total</td>         
+                                
+                                 
+              
+                
+                
+                </tr>
+            
+                
+                
+                
+                </tbody>
+                </table>
+          </div>
+      </div>
+     
+                  <!-- <ng-container >
+                    <button class="btn btn-block btn-dark" >Check Out</button>
+                  </ng-container> -->
+                  <button style ="width: 277px; margin-left: 485px ; margin-top: 30px;" type="button" class="btn btn-success " routerLink="/form">Check Out</button>
+
+</div><br><br><br>
+

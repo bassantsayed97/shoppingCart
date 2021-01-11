@@ -1,0 +1,55 @@
+<!-- <div id="cards_landscape_wrap-2" style="display: inline;">
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-4 col-lg-4 ">
+                
+                    <div class="card-flyer" *ngFor="let i of data">
+                        <div class="text-box">
+                            <div class="image-box">
+                                <img  width="100%" height="200" [src]="i['image']"
+                                role="img" aria-label="Placeholder: Thumbnail" />                            </div>
+                            <div class="text-container">
+                                <h6>{{i.price | currency:'$'}}</h6>
+                                <p>{{i.description | slice: 0:50}}...</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-primary" (click)="addCard(i)">Add To Card</button>
+                                </div>
+                        </div>
+                    </div>
+              
+            </div>
+            </div>
+            </div> -->
+
+            <input [(ngModel)]='term' class="form-control w-50 m-auto" type="search" placeholder="search here..">
+           
+            <br>
+<br>
+            <div class="album py-5 bg-light">
+                <div class="container">
+            
+                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                     <div class="col-md-4 mb-4" *ngFor="let i of data|filter:term ; let b=index">
+                        <div class="card shadow-sm">
+                            <img  [routerLink]='["/details" , b]' class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{i.image}}"
+                             role="img" aria-label="Placeholder: Thumbnail" />
+                        
+                           <div class="card-body">
+                            <strong class="text-muted">{{i.price | currency:'$'}}</strong>
+                              <p class="card-text">{{i.description | slice: 0:50}}...</p>
+                               <div class="d-flex justify-content-between align-items-center">
+                                   <div class="btn-group">
+                                   <button type="button" class="btn btn-primary mr-5" (click)="addCard(i)">Add To Card  <i class="fa fa-shopping-cart"></i></button>
+                                   </div>
+                                   
+                                    
+                               </div>
+                             </div> 
+                         </div> 
+                      </div>
+                 </div>
+                
+             </div>
+            </div>

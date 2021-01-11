@@ -1,0 +1,112 @@
+<footer id="footer" class="section section-grey">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <!-- footer widget -->
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <div class="footer">
+                    <!-- footer logo -->
+                    <div class="footer-logo">
+                        <a class="logo" href="#">
+                            <img src="assets/online-shop-logo_18099-275.jpg" style="width: 100px;">
+              </a>
+                    </div>
+                    <!-- /footer logo -->
+
+                    <p>mmmmm iiiiii ddddd stttttt, ccdfrewwr akgrmkming ekkkk, mar dklmglgrd tkk or.</p>
+
+                    <!-- footer social -->
+                    <ul class="footer-social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    </ul>
+                    <!-- /footer social -->
+                </div>
+            </div>
+            <!-- /footer widget -->
+
+            <!-- footer widget -->
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <div class="footer">
+                    <h3 class="footer-header">My Account</h3>
+                    <ul class="list-links">
+                        <li><a href="#">My Account</a></li>
+
+                        <li><a href="#">Compare</a></li>
+                        <li><a href="#">Checkout</a></li>
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /footer widget -->
+
+            <div class="clearfix visible-sm visible-xs"></div>
+
+            <!-- footer widget -->
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <div class="footer">
+                    <h3 class="footer-header">Customer Service</h3>
+                    <ul class="list-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Shiping & Return</a></li>
+                        <li><a href="#">Shiping Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /footer widget -->
+
+            <!-- footer subscribe -->
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <div class="footer">
+                    <h3 class="footer-header">Stay Connected</h3>
+                    <p>mmmmm iiiiii ddddd stttttt, ccdfrewwr akgrmkming ekkkk, mar dklmglgrd tkk or.</p>
+                    <form #myForm="ngForm" (ngSubmit)="onSubmitTemplateBased(myForm.value)">
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">Email address</label>
+                          <input 
+                          required
+                          type="email"
+                           class="form-control"
+                            id="exampleFormControlInput1" 
+                            placeholder="name@example.com"
+                            ngModel
+                            name="email"
+                            #email="ngModel"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+                            />
+                            <div       class="alert alert-danger" *ngIf="email.touched">
+                              <p *ngIf="email.errors?.required">Email is a required field!</p>
+                              
+                              <p *ngIf="email.errors?.pattern">This is not a format Email!!! </p>
+                            </div>
+                        </div>
+                      <button class="btn btn-primary"> submit</button>
+                      </form>
+                </div>
+            </div>
+            <!-- /footer subscribe -->
+        </div>
+        <!-- /row -->
+        <hr>
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <!-- footer copyright -->
+                <div class="footer-copyright">
+                   
+                    Copyright Bassant
+                </div>
+                <!-- /footer copyright -->
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</footer>
+<!-- /FOOTER -->
+
